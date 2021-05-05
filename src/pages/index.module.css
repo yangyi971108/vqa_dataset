@@ -1,60 +1,90 @@
 .layout {
-    min-height: 100vh;
+  min-height: 500vh;
+
 }
 
 
 .title {
-    width: 200px;
-    margin: auto 24px;
-    font-size: 1.2rem;
+  width: 200px;
+  margin: auto 24px;
+  font-size: 1.2rem;
 }
 
 .header {
-    left: 0px;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.12),0 0 13px 2px rgba(0,0,0,0.05);
-    background-color: #fff;
-    padding: 0 26px 0 36px;
-    position: relative;
-    z-index: 99;
-    margin-bottom: 30px;
-    height: 88px;
+  left: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12), 0 0 13px 2px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 0 26px 0 36px;
+  position: relative;
+  z-index: 99;
+  margin-bottom: 0px;
+  height: 88px;
 
 }
-.logoImg{
-    height:60px;
-    vertical-align:-webkit-baseline-middle;
-    position:relative;
-    left:'35%'
-}
-.headText{
-    font-size:26px;
-    position:relative;
-    left:37%;
-    vertical-align:middle;
-    font-weight:bold;
-    font-family:'Source Sana Pro,sans-serif';
-    color:darkblue
-    
-}
-.sider{
-    width: 500px;
-    display: flex;
-    background-color:inherit;
-    color:white;
-}
-.footer{
-    display: flex;
-    justify-content: space-between;
-    /* background: linear-gradient(to bottom, #232526 0%, #121315 100%);
-    flex: 2;
-    position: relative;
-    z-index: 9;
-    padding: 5rem 2.5rem; */
+
+.logoImg {
+  height: 60px;
+  vertical-align: -webkit-baseline-middle;
+  position: relative;
+  left: '35%'
 }
 
-.menu{
-    flex: auto
+.bgImg {
+  height: 200px;
+  width: 100%;
+}
+
+.nav_con {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+}
+
+
+.headText {
+  font-size: 26px;
+  position: relative;
+  left: 18%;
+  vertical-align: middle;
+
+  font-family: 'Source Sana Pro,sans-serif';
+  color: darkblue
+}
+
+.dataText {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  font-size: 26px;
+  color: white;
+  font-family: 'Source Sana Pro,sans-serif';
+  font-weight: bold;
+}
+
+.datah2Text {
+  position: absolute;
+  left: 32%;
+  top: 35%;
+  font-size: 16px;
+  color: white;
+  font-family: 'Source Sana Pro,sans-serif';
+}
+
+.sider {
+  width: 500px;
+  display: flex;
+  background-color: inherit;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  flex: auto
 }
