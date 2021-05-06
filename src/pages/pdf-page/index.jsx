@@ -6,7 +6,7 @@ function PDFPage () {
   console.log('pdfFile', pdfFile)
   const [numPages, setnumPages] = useState();
   const [pageNumber, setpageNumber] = useState(1);
-
+  const pdfWidth = window.innerWidth;
   var onDocumentLoadSuccess = (numPages) => {
     console.log('numPages', numPages._pdfInfo.numPages)
     setnumPages(numPages._pdfInfo.numPages);
@@ -22,7 +22,7 @@ function PDFPage () {
 
       {
         numPages ? (new Array(numPages).fill('').map((item, index) => {
-          return <Page style={{ width: '100vw' }} className='page' width={1300} key={index} pageNumber={index + 1} />
+          return <Page  className='page' width={pdfWidth} key={index} pageNumber={index + 1} />
         })) : (
           null
         )
