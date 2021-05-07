@@ -1,6 +1,6 @@
 .layout {
-  min-height: 500vh;
-
+  /* min-height: 100vh; */
+  height: fit-content;
 }
 
 
@@ -25,12 +25,17 @@
 
 }
 
+.content{
+  flex:auto
+}
+
 .logoImg {
   height: 60px;
   vertical-align: -webkit-baseline-middle;
   position: relative;
   z-index: -1;
   float: left;
+  top:0.8rem;
 }
 
 .headText {
@@ -39,7 +44,9 @@
   justify-content: center;
   align-items: center;
   font-family: 'Source Sana Pro,sans-serif';
-  color: darkblue
+  color: darkblue;
+  position: relative;
+  top:1.2rem
 }
 
 .bgImg {
@@ -88,9 +95,8 @@
   color: white;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
+.footer{
+  height: 5rem;
 }
 
 .menu {
@@ -144,5 +150,50 @@ table thead th{
   height: 25rem;
   width: 100%;
   position: relative;
-  top:10rem;
+  top:3rem;
+}
+.wholeImg{
+  background-image: url('../assets/whole_dataset.png');
+  width:70%;
+  height:0;
+  left: 15%;
+  position:relative;
+  padding-bottom:25.78%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+}
+.AboutImg{
+  background-image: url('../assets/object_detection_example.png');
+  width:70%;
+  height:0;
+  left: 15%;
+  top:4.5rem;
+  position:relative;
+  padding-bottom:54.516%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+}
+
+.vqaImg{
+  background-image: url('../assets/vqa_dataset.png');
+  width:70%;
+  height:0;
+  left: 15%;
+  top:11rem;
+  position:relative;
+  padding-bottom:53.11%;
+  overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
 }
