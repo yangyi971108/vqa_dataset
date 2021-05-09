@@ -25,8 +25,8 @@
 
 }
 
-.content{
-  flex:auto
+.content {
+  flex: auto
 }
 
 .logoImg {
@@ -35,7 +35,7 @@
   position: relative;
   z-index: -1;
   float: left;
-  top:0.8rem;
+  top: 0.8rem;
 }
 
 .headText {
@@ -46,7 +46,7 @@
   font-family: 'Source Sana Pro,sans-serif';
   color: darkblue;
   position: relative;
-  top:1.2rem
+  top: 1.2rem
 }
 
 .bgImg {
@@ -57,7 +57,7 @@
 
 .dataText {
   position: relative;
-  top:-150px;
+  top: -150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +95,7 @@
   color: white;
 }
 
-.footer{
+.footer {
   height: 5rem;
 }
 
@@ -103,97 +103,100 @@
   flex: auto
 }
 
-.col1{
+.col1 {
   display: flex;
-  
+
 }
 
 .wrap {
-	/* 这个只是用来居中内容 */
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	padding: 8px;
+  /* 这个只是用来居中内容 */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
   position: relative;
-  top:5rem;
+  top: 5rem;
 }
 
-table thead th{
-	font-size: 400;
+table thead th {
+  font-size: 400;
 }
 
 .table_wrap {
-	overflow: auto;
-	width: 70%;
+  overflow: auto;
+  width: 70%;
 }
 
 .table {
-	border-collapse: collapse;
-	width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .table_title {
-	
-	left: 10rem;
-	position: sticky;
-	text-align:left;
+
+  left: 10rem;
+  position: sticky;
+  text-align: left;
   font-size: 1.5rem;
   padding: 0.3rem;
 }
 
 
 .table_content {
-	font-size: x-large;
+  font-size: x-large;
 }
 
-.examples{
+.examples {
   height: 25rem;
   width: 100%;
   position: relative;
-  top:3rem;
-}
-.wholeImg{
-  background-image: url('../assets/whole_dataset.png');
-  width:70%;
-  height:0;
-  left: 15%;
-  position:relative;
-  padding-bottom:25.78%;
-  overflow:hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
-}
-.AboutImg{
-  background-image: url('../assets/object_detection_example.png');
-  width:70%;
-  height:0;
-  left: 15%;
-  top:4.5rem;
-  position:relative;
-  padding-bottom:54.516%;
-  overflow:hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
+  top: 3rem;
 }
 
-.vqaImg{
-  background-image: url('../assets/vqa_dataset.png');
-  width:70%;
-  height:0;
-  left: 15%;
-  top:11rem;
-  position:relative;
-  padding-bottom:53.11%;
-  overflow:hidden;
+.wholeImg {
+  background-image: url('../assets/whole_dataset.png');
+  width: 70%;
+  height: 0;
+  left: 10%;
+  position: relative;
+  padding-bottom: 25.78%;
+  top: 1.5rem;
+  overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.AboutImg {
+  background-image: url('../assets/object_detection_example.png');
+  width: 70%;
+  height: 0;
+  left: 15%;
+  top: 4.5rem;
+  position: relative;
+  padding-bottom: 54.516%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.vqaImg {
+  background-image: url('../assets/vqa_dataset.png');
+  width: 70%;
+  height: 0;
+  left: 15%;
+  top: 11rem;
+  position: relative;
+  padding-bottom: 53.11%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
