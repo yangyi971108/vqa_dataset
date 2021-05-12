@@ -83,8 +83,8 @@
 
 .nav_con {
   position: absolute;
-  top: 350px;
-  left: 50px;
+  top: 400px;
+  left: 125px;
 }
 
 
@@ -151,6 +151,7 @@ table thead th {
   width: 100%;
   position: relative;
   top: 3rem;
+  left:40px;
 }
 
 .wholeImg {
@@ -169,14 +170,30 @@ table thead th {
   background-size: cover;
 }
 
-.AboutImg {
-  background-image: url('../assets/object_detection_example.png');
+.AnnotationImg {
+  background-image: url('../assets/annotation.png');
   width: 70%;
   height: 0;
-  left: 15%;
-  top: 4.5rem;
+  left: 10%;
+  top: 1.5rem;
   position: relative;
-  padding-bottom: 54.516%;
+  padding-bottom: 40.29%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.AboutImg {
+  background-image: url('../assets/object_detection_example.png');
+  width: 40%;
+  height: 0;
+  left:7%;
+  top: 8rem;
+  position: relative;
+  padding-bottom: 31.15%;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -189,8 +206,8 @@ table thead th {
   background-image: url('../assets/vqa_dataset.png');
   width: 70%;
   height: 0;
-  left: 15%;
-  top: 11rem;
+  left: 10%;
+  top: 5rem;
   position: relative;
   padding-bottom: 53.11%;
   overflow: hidden;
@@ -200,3 +217,4 @@ table thead th {
   -moz-background-size: cover;
   background-size: cover;
 }
+
