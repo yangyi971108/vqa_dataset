@@ -29,6 +29,15 @@
   flex: auto
 }
 
+.xjtuImg {
+  height: 60px;
+  vertical-align: -webkit-baseline-middle;
+  position: relative;
+  z-index: -1;
+  float: left;
+  top: 0.8rem;
+}
+
 .logoImg {
   height: 60px;
   vertical-align: -webkit-baseline-middle;
@@ -57,7 +66,7 @@
 
 .dataText {
   position: relative;
-  top: -150px;
+  top: -120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +160,7 @@ table thead th {
   width: 100%;
   position: relative;
   top: 3rem;
-  left:40px;
+  left: 40px;
 }
 
 .wholeImg {
@@ -190,7 +199,7 @@ table thead th {
   background-image: url('../assets/object_detection_example.png');
   width: 40%;
   height: 0;
-  left:7%;
+  left: 7%;
   top: 8rem;
   position: relative;
   padding-bottom: 31.15%;
@@ -217,4 +226,3 @@ table thead th {
   -moz-background-size: cover;
   background-size: cover;
 }
-
