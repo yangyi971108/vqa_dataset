@@ -142,14 +142,15 @@ table thead th {
 }
 
 .table_title {
-
-  left: 10rem;
-  position: sticky;
-  text-align: left;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 20px;
   padding: 0.3rem;
 }
-
+.table_text {
+  text-align: center;
+  font-size: 20px;
+  padding: 0.3rem;
+}
 
 .table_content {
   font-size: x-large;
@@ -164,12 +165,12 @@ table thead th {
 }
 
 .wholeImg {
-  background-image: url('../assets/whole_dataset.png');
+  background-image: url('../assets/Introduction.png');
   width: 70%;
   height: 0;
   left: 10%;
   position: relative;
-  padding-bottom: 25.78%;
+  padding-bottom: 25.1363%;
   top: 1.5rem;
   overflow: hidden;
   background-position: center center;
@@ -179,21 +180,7 @@ table thead th {
   background-size: cover;
 }
 
-.staticsticImg {
-  background-image: url('../assets/staticisData.png');
-  width: 70%;
-  height: 0;
-  left: 10%;
-  position: relative;
-  padding-bottom: 36.7%;
-  top: 1.5rem;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
+
 
 
 .AnnotationImg {
@@ -203,7 +190,7 @@ table thead th {
   left: 10%;
   top: 1.5rem;
   position: relative;
-  padding-bottom: 40.29%;
+  padding-bottom: 26.896%;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -213,7 +200,7 @@ table thead th {
 }
 
 .AboutImg {
-  background-image: url('../assets/object_detection_example.png');
+  background-image: url('../assets/ObjectDetection.png');
   width: 40%;
   height: 0;
   left: 7%;
@@ -229,13 +216,13 @@ table thead th {
 }
 
 .vqaImg {
-  background-image: url('../assets/vqa_dataset.png');
+  background-image: url('../assets/QA.png');
   width: 70%;
   height: 0;
   left: 10%;
   top: 5rem;
   position: relative;
-  padding-bottom: 53.11%;
+  padding-bottom: 18.042%;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;

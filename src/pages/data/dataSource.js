@@ -106,5 +106,14 @@ export const dataSource = [
     relations: 517,
     choice: 100,
     TF:100,
-  }
+  },
+  {
+    key:'13',
+    category:'Total',
+    diagrams: 1294,
+    objectes: 11716,
+    relations: 5675,
+    choice: 1747,
+    TF:1747,
+  },
 ]

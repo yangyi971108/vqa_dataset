@@ -12,17 +12,16 @@ function HomePage () {
   const navArr = ['TOP', 'ABOUT', 'PAPER', 'STATISTICS', 'EXAMPLES', 'CONTACT'];
   const [currentId, setCurrentId] = useState(0);
   // 页面插入的图片
-  const xjtuImg = require("../../assets/bianlogo.jpg");
   const logoImg = require('../../assets/logo.png');
   const bgImg = require('../../assets/bg4.png');
-  const AboutImg = require('../../assets/object_detection_example.png');
-  const wholeImg = require('../../assets/whole_dataset.png');
-  const vqaImg = require('../../assets/vqa_dataset.png');
+  const AboutImg = require('../../assets/ObjectDetection.png');
+  const wholeImg = require('../../assets/Introduction.png');
+  const vqaImg = require('../../assets/QA.png');
   const AnnotationImg = require('../../assets/annotation.png');
-  const vqadataset = require('../../assets/ImageSets.zip');
+  const vqadataset = require('../../assets/CSDQA.rar');
   const history = useHistory();
   const pdfFile = require('../../assets/IEEEtrans.pdf');
-  const staticstic = require('../../assets/staticisData.png');
+ 
 
   const columns = [
     {
@@ -155,7 +154,7 @@ function HomePage () {
               <div className="section" id="nav-1" style={{ position: 'relative', top: 40, left: 40 }} >
                 <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', }}>Computer Science Diagrams QA（CSDQA）</h2>
                 <img src={wholeImg} className={classes.wholeImg} />
-                <div style={{ width: '90%', margin: 0, fontSize: '18px', top: '2.8rem', position: 'relative', lineHeight: 1.5, textAlign: 'justify' }}>
+                <div style={{ width: '90%', margin: 0, fontSize: '20px', top: '2.8rem', position: 'relative', lineHeight: 1.7, textAlign: 'justify' }}>
                   <strong> Computer Science Diagrams QA（CSDQA）</strong>is a computer science domain dataset with rich annotations supervision. It contains a total of 1,294 diagrams in 12 categories from five undergraduate courses: <i>Data structure</i>, <i>Principles of Computer Networks</i>, <i>Computer Architecture</i>, <i>Digital Logic Circuit</i>, and <i>Computer Operating System</i>. The CSDQA dataset is designed to evaluate algorithms on the tasks of object detection and  question answering in the geometric shapes diagrams scenario. Diagrams in CSDQA come from textbooks, blogs, encyclopedias and other educational resources. The annotations are completed by trained domain experts with plenty of time.
                 </div>
                 <Divider style={{ position: 'relative', top: '2rem' }} />
@@ -166,7 +165,125 @@ function HomePage () {
               <div className="section" id="nav-2" >
                 <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: 60, left: 40, position: 'relative' }}>CSDQA STATISTICS</h2>
                 <div className={classes.wrap}>
-                  <Table dataSource={dataSource}></Table>
+                  <div className={classes.table_wrap}>
+                    <table className={classes.table}>
+                      <tbody>
+                        <tr style={{borderTop:'1px solid black',borderBottom:'1px solid black'}}>
+                          <th className={classes.table_title}>Category</th>
+                          <th className={classes.table_title}>Diagrams</th>
+                          <th className={classes.table_title}>Objects</th>
+                          <th className={classes.table_title}>Relations</th>
+                          <th className={classes.table_title}>Multiple choiced</th>
+                          <th className={classes.table_title}>True-or-false</th>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Array list</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>583</td>
+                          <td className={classes.table_text}>468</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>100</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Linked list</td>
+                          <td className={classes.table_text}>74</td>
+                          <td className={classes.table_text}>626</td>
+                          <td className={classes.table_text}>375</td>
+                          <td className={classes.table_text}>74</td>
+                          <td className={classes.table_text}>74</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Binary tree</td>
+                          <td className={classes.table_text}>150</td>
+                          <td className={classes.table_text}>1323</td>
+                          <td className={classes.table_text}>590</td>
+                          <td className={classes.table_text}>150</td>
+                          <td className={classes.table_text}>150</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Non-binary tree</td>
+                          <td className={classes.table_text}>150</td>
+                          <td className={classes.table_text}>1489</td>
+                          <td className={classes.table_text}>651</td>
+                          <td className={classes.table_text}>300</td>
+                          <td className={classes.table_text}>300</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Queue</td>
+                          <td className={classes.table_text}>150</td>
+                          <td className={classes.table_text}>1261</td>
+                          <td className={classes.table_text}>444</td>
+                          <td className={classes.table_text}>303</td>
+                          <td className={classes.table_text}>303</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Stack</td>
+                          <td className={classes.table_text}>150</td>
+                          <td className={classes.table_text}>540</td>
+                          <td className={classes.table_text}>403</td>
+                          <td className={classes.table_text}>300</td>
+                          <td className={classes.table_text}>300</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Directed Graph</td>
+                          <td className={classes.table_text}>71</td>
+                          <td className={classes.table_text}>695</td>
+                          <td className={classes.table_text}>377</td>
+                          <td className={classes.table_text}>71</td>
+                          <td className={classes.table_text}>70</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Undirected Graph</td>
+                          <td className={classes.table_text}>79</td>
+                          <td className={classes.table_text}>828</td>
+                          <td className={classes.table_text}>437</td>
+                          <td className={classes.table_text}>79</td>
+                          <td className={classes.table_text}>79</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Deadlock</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>849</td>
+                          <td className={classes.table_text}>423</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>100</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Flow chart</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>985</td>
+                          <td className={classes.table_text}>458</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>100</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Logic circuit</td>
+                          <td className={classes.table_text}>70</td>
+                          <td className={classes.table_text}>913</td>
+                          <td className={classes.table_text}>432</td>
+                          <td className={classes.table_text}>70</td>
+                          <td className={classes.table_text}>70</td>
+                        </tr>
+                        <tr>
+                          <td className={classes.table_text}>Network topology</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>1593</td>
+                          <td className={classes.table_text}>517</td>
+                          <td className={classes.table_text}>100</td>
+                          <td className={classes.table_text}>100</td>
+                        </tr>
+                        <tr style={{borderTop:'1px solid black',borderBottom:'1px solid black'}}>
+                          <td className={classes.table_text}>Total</td>
+                          <td className={classes.table_text}>1294</td>
+                          <td className={classes.table_text}>11716</td>
+                          <td className={classes.table_text}>5675</td>
+                          <td className={classes.table_text}>1747</td>
+                          <td className={classes.table_text}>1747</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  {/* <Table dataSource={dataSource} columns={columns} pagination={false} style={{width:'1rem'}}></Table> */}
                   {/* <img src={staticstic} className={classes.staticsticImg} /> */}
                   {/* <div className={classes.table_wrap}>
                     <table className={classes.table}>
