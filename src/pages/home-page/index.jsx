@@ -21,7 +21,7 @@ function HomePage () {
   const vqadataset = require('../../assets/CSDQA.rar');
   const history = useHistory();
   const pdfFile = require('../../assets/IEEEtrans.pdf');
- 
+
 
   const columns = [
     {
@@ -152,10 +152,10 @@ function HomePage () {
             </div>
             <div className="center-con" id="center-con" style={{ position: 'absolute', left: '20%', top: '320px', backgroundColor: 'white', width: '60%' }}>
               <div className="section" id="nav-1" style={{ position: 'relative', top: 40, left: 40 }} >
-                <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', }}>Computer Science Diagrams QA（CSDQA）</h2>
+                <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', }}>Computer Science Diagrams QA (CSDQA)</h2>
                 <img src={wholeImg} className={classes.wholeImg} />
                 <div style={{ width: '90%', margin: 0, fontSize: '20px', top: '2.8rem', position: 'relative', lineHeight: 1.7, textAlign: 'justify' }}>
-                  <strong> Computer Science Diagrams QA（CSDQA）</strong>is a computer science domain dataset with rich annotations supervision. It contains a total of 1,294 diagrams in 12 categories from five undergraduate courses: <i>Data structure</i>, <i>Principles of Computer Networks</i>, <i>Computer Architecture</i>, <i>Digital Logic Circuit</i>, and <i>Computer Operating System</i>. The CSDQA dataset is designed to evaluate algorithms on the tasks of object detection and  question answering in the geometric shapes diagrams scenario. Diagrams in CSDQA come from textbooks, blogs, encyclopedias and other educational resources. The annotations are completed by trained domain experts with plenty of time.
+                  <strong> Computer Science Diagrams QA (CSDQA) </strong>is a computer science domain dataset with rich annotations supervision. It contains a total of 1,294 diagrams in 12 categories from five undergraduate courses: <i>Data structure</i>, <i>Principles of Computer Networks</i>, <i>Computer Architecture</i>, <i>Digital Logic Circuit</i>, and <i>Computer Operating System</i>. The CSDQA dataset is designed to evaluate algorithms on the tasks of object detection and  question answering in the geometric shapes diagrams scenario. Diagrams in CSDQA come from textbooks, blogs, encyclopedias and other educational resources. The annotations are completed by trained domain experts with plenty of time.
                 </div>
                 <Divider style={{ position: 'relative', top: '2rem' }} />
               </div>
@@ -168,7 +168,7 @@ function HomePage () {
                   <div className={classes.table_wrap}>
                     <table className={classes.table}>
                       <tbody>
-                        <tr style={{borderTop:'1px solid black',borderBottom:'1px solid black'}}>
+                        <tr style={{ borderTop: '1px solid black', borderBottom: '1px solid black' }}>
                           <th className={classes.table_title}>Category</th>
                           <th className={classes.table_title}>Diagrams</th>
                           <th className={classes.table_title}>Objects</th>
@@ -272,7 +272,7 @@ function HomePage () {
                           <td className={classes.table_text}>100</td>
                           <td className={classes.table_text}>100</td>
                         </tr>
-                        <tr style={{borderTop:'1px solid black',borderBottom:'1px solid black'}}>
+                        <tr style={{ borderTop: '1px solid black', borderBottom: '1px solid black' }}>
                           <td className={classes.table_text}>Total</td>
                           <td className={classes.table_text}>1294</td>
                           <td className={classes.table_text}>11716</td>
@@ -283,34 +283,6 @@ function HomePage () {
                       </tbody>
                     </table>
                   </div>
-                  {/* <Table dataSource={dataSource} columns={columns} pagination={false} style={{width:'1rem'}}></Table> */}
-                  {/* <img src={staticstic} className={classes.staticsticImg} /> */}
-                  {/* <div className={classes.table_wrap}>
-                    <table className={classes.table}>
-                      <tbody>
-                        <tr style={{ backgroundColor: 'rgba(220,220,220,0.5)' }}>
-                          <th className={classes.table_title}>Diagrams</th>
-                          <td className={classes.table_content}>1294</td>
-                        </tr>
-                        <tr>
-                          <th className={classes.table_title}>Objects</th>
-                          <td className={classes.table_content}>11776</td>
-                        </tr>
-                        <tr style={{ backgroundColor: 'rgba(220,220,220,0.5)' }}>
-                          <th className={classes.table_title}>Relations</th>
-                          <td className={classes.table_content}>5675</td>
-                        </tr>
-                        <tr>
-                          <th className={classes.table_title}>Questions</th>
-                          <td className={classes.table_content}>2894</td>
-                        </tr>
-                        <tr style={{ backgroundColor: 'rgba(220,220,220,0.5)' }}>
-                          <th className={classes.table_title}>Annotations</th>
-                          <td className={classes.table_content}>>30000</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div> */}
                 </div>
                 <a href={vqadataset} style={{ width: 100, height: 100 }} download="CSDQA">
                   <Row justify="center" align="center" style={{ position: 'relative', top: '6.5rem' }} >
@@ -329,13 +301,14 @@ function HomePage () {
                 </a>
               </div>
               <Divider style={{ position: 'relative', top: '1.5rem' }} />
-              <div className="section" id="nav-4" >
+
+              <div className="section" id="nav-3" >
                 <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: '1rem', left: 40, position: 'relative' }}>EXAMPLES</h2>
                 <div className={classes.examples}>
 
-                  <h3 style={{ fontSize: '1.25rem', position: 'relative', left: '3.5%', width: '14rem', backgroundColor: 'rgba(220,220,220,0.7)', display: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '-0.5rem' }}>Annotation Example</h3>
+                  <h3 style={{ fontSize: '22px', position: 'relative', left: '3.5%', width: '14rem', backgroundColor: 'rgba(220,220,220,0.7)', display: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '-0.5rem' }}>Annotation Example</h3>
                   <img src={AnnotationImg} className={classes.AnnotationImg} />
-                  <div style={{ position: 'relative', top: '3rem', fontSize: '1.2rem', lineHeight: 2, textAlign: 'justify', width: '90%' }}>Example of an undirected graph diagram annotation in CSDQA. （a）Global attribute: Describe the relevant knowledge of the diagram in a macro view. (b) Object: Fine-grained annotation of objects included in the diagram. (c) Relation: Attach the relation between objects to logical symbols such as arrows and straight lines, including the relation of the triple type annotation.</div>
+                  <div style={{ position: 'relative', top: '3rem', fontSize: '20px', lineHeight: 1.7, textAlign: 'justify', width: '90%' }}>Example of an undirected graph diagram annotation in CSDQA. (a)Global attribute: Describe the relevant knowledge of the diagram in a macro view. (b) Object: Fine-grained annotation of objects included in the diagram. (c) Relation: Attach the relation between objects to logical symbols such as arrows and straight lines, including the relation of the triple type annotation.</div>
                   <Divider style={{ position: 'relative', top: '3rem' }} />
 
 
@@ -343,7 +316,7 @@ function HomePage () {
                   <h3 style={{ fontSize: '1.25rem', position: 'relative', left: '3.5%', width: '14rem', backgroundColor: 'rgba(220,220,220,0.7)', display: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '4.5rem' }}>Object detection</h3>
                   <img src={AboutImg} className={classes.AboutImg} />
                   {/* <div style={{position:'relative',top:'9rem',fontSize:'1.2rem',lineHeight: 2, textAlign: 'justify',width:'90%'}}>The CSDQA dataset encourages work on the task of object detection task, which is the important basis for diagrams understanding.</div> */}
-                  <div style={{ position: 'relative', top: '-30%', fontSize: '1.2rem', lineHeight: 2, textAlign: 'justify', width: '20rem', left: '55%' }}>The CSDQA dataset encourages work on the task of object detection task, which is the important basis for diagrams understanding.</div>
+                  <div style={{ position: 'relative', top: '-30%', fontSize: '20px', lineHeight: 1.7, textAlign: 'justify', width: '20rem', left: '55%' }}>The CSDQA dataset encourages work on the task of object detection task, which is the important basis for diagrams understanding.</div>
 
                   <Divider style={{ position: 'relative', top: '0rem' }} />
 
