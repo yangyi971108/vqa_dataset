@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Source Sana Pro,sans-serif';
+  /* font-family: 'Source Sana Pro,sans-serif'; */
   color: darkblue;
   position: relative;
   top: 1.2rem
@@ -74,7 +74,7 @@
   left: 40%; */
   font-size: 26px;
   color: white;
-  font-family: 'Source Sana Pro,sans-serif';
+  /* font-family: 'Source Sana Pro,sans-serif'; */
   font-weight: bold;
 }
 
@@ -86,7 +86,7 @@
   justify-content: center;
   font-size: 16px;
   color: white;
-  font-family: 'Source Sana Pro,sans-serif';
+  /* font-family: 'Source Sana Pro,sans-serif'; */
 }
 
 
@@ -178,6 +178,23 @@ table thead th {
   -moz-background-size: cover;
   background-size: cover;
 }
+
+.staticsticImg {
+  background-image: url('../assets/staticisData.png');
+  width: 70%;
+  height: 0;
+  left: 10%;
+  position: relative;
+  padding-bottom: 36.7%;
+  top: 1.5rem;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
 
 .AnnotationImg {
   background-image: url('../assets/annotation.png');

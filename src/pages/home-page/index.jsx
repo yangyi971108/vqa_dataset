@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
-import { Layout, Divider, Row, Col, Slider, Card, Typography, Table } from 'antd';
+import { Layout, Divider, Row, Col, Table, Slider, Card, Typography } from 'antd';
 import classes from '.././index.module.css';
 import { FilePdfOutlined } from '@ant-design/icons';
 
 import { useHistory, Switch, Route, useLocation } from 'react-router-dom';
 
-
+import { dataSource } from '../data/dataSource';
 function HomePage () {
   // 页面布局相关
   const { Header, Content, Footer, Sider } = Layout;
@@ -22,6 +22,40 @@ function HomePage () {
   const vqadataset = require('../../assets/ImageSets.zip');
   const history = useHistory();
   const pdfFile = require('../../assets/IEEEtrans.pdf');
+  const staticstic = require('../../assets/staticisData.png');
+
+  const columns = [
+    {
+      title: 'Category',
+      dataIndex: 'category',
+      key: 'category',
+    },
+    {
+      title: 'Diagrams',
+      dataIndex: 'diagrams',
+      key: 'diagrams',
+    },
+    {
+      title: 'Objects',
+      dataIndex: 'objects',
+      key: 'objects',
+    },
+    {
+      title: 'Relations',
+      dataIndex: 'relations',
+      key: 'relations',
+    },
+    {
+      title: 'Multiple choice',
+      dataIndex: 'choice',
+      key: 'choice',
+    },
+    {
+      title: 'True or false',
+      dataIndex: 'TF',
+      key: 'TF',
+    },
+  ]
 
   window.onscroll = () => {
     // 获取当前滚动条的位置
@@ -114,43 +148,27 @@ function HomePage () {
           <div className="main-con">
             <div className="section" id="nav-0" style={{ height: '200px' }}>
               <img className={classes.bgImg} src={bgImg} />
-              <span className={classes.dataText} >Computer Science Diagrams QA</span>
+              <span className={classes.dataText} >Computer Science Diagrams Question Answering</span>
               {/* <span className={classes.datah2Text}>Diagram parsing and corresponding question answering</span> */}
             </div>
             <div className="center-con" id="center-con" style={{ position: 'absolute', left: '20%', top: '320px', backgroundColor: 'white', width: '60%' }}>
               <div className="section" id="nav-1" style={{ position: 'relative', top: 40, left: 40 }} >
-                <h2 style={{ color: 'darkgrey', fontSize: '1.5rem' }}>Computer Science Diagrams QA（CSDQA）</h2>
+                <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', }}>Computer Science Diagrams QA（CSDQA）</h2>
                 <img src={wholeImg} className={classes.wholeImg} />
-                <div style={{ width: '90%', margin: 0, fontSize: '18px', top: '2.8rem', position: 'relative', lineHeight: 1.5, textAlign: 'justify', fontFamily: 'Source Sana Pro,sans-serif' }}>
+                <div style={{ width: '90%', margin: 0, fontSize: '18px', top: '2.8rem', position: 'relative', lineHeight: 1.5, textAlign: 'justify' }}>
                   <strong> Computer Science Diagrams QA（CSDQA）</strong>is a computer science domain dataset with rich annotations supervision. It contains a total of 1,294 diagrams in 12 categories from five undergraduate courses: <i>Data structure</i>, <i>Principles of Computer Networks</i>, <i>Computer Architecture</i>, <i>Digital Logic Circuit</i>, and <i>Computer Operating System</i>. The CSDQA dataset is designed to evaluate algorithms on the tasks of object detection and  question answering in the geometric shapes diagrams scenario. Diagrams in CSDQA come from textbooks, blogs, encyclopedias and other educational resources. The annotations are completed by trained domain experts with plenty of time.
                 </div>
                 <Divider style={{ position: 'relative', top: '2rem' }} />
               </div>
 
 
-              <div className="section" id="nav-2" style={{ top: '3.5rem', position: 'relative' }} >
-                <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: '0rem', left: 40, position: 'relative' }}>Paper</h2>
-                <Row justify="center" align="center" style={{ position: 'relative', top: '0.5rem' }} >
-                  <Col span={4}>
-                    <img style={{ width: '10rem', height: '8rem' }} src={AboutImg} />
-                  </Col>
-                  <Col span={12} offset={2}>
-                    <div style={{ fontFamily: 'Source Sana Pro,sans-serif', fontSize: '18px', lineHeight: 1.5 }} onMouseOver={onmouseOver} onMouseOut={onmouseout} onClick={() => {
-                      history.push('/pdf')
-                    }}>
-                      RL-CSDia: Representation Learning of Computer Science Diagrams
-                    </div>
-                    <div style={{ fontFamily: 'Source Sana Pro,sans-serif', fontSize: '14px', lineHeight: 1.5 }}>Shaowei Wang, Lingling Zhang, Xuan Luo, Xin Hu, Yi Yang, Jun Liu</div>
-                    <a href={pdfFile} style={{ color: 'gray', fontWeight: 'bold', position: 'relative' }}><FilePdfOutlined style={{ fontSize: '14px', fontFamily: 'Source Sana Pro,sans-serif' }} /><span style={{ position: 'relative', left: '2rem' }}>Download Paper</span></a>
-                  </Col>
-                </Row>
-                <Divider style={{ position: 'relative', top: '0.5rem' }} />
-              </div>
 
-              <div className="section" id="nav-3" >
+              <div className="section" id="nav-2" >
                 <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: 60, left: 40, position: 'relative' }}>CSDQA STATISTICS</h2>
                 <div className={classes.wrap}>
-                  <div className={classes.table_wrap}>
+                  <Table dataSource={dataSource}></Table>
+                  {/* <img src={staticstic} className={classes.staticsticImg} /> */}
+                  {/* <div className={classes.table_wrap}>
                     <table className={classes.table}>
                       <tbody>
                         <tr style={{ backgroundColor: 'rgba(220,220,220,0.5)' }}>
@@ -175,7 +193,7 @@ function HomePage () {
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                  </div> */}
                 </div>
                 <a href={vqadataset} style={{ width: 100, height: 100 }} download="CSDQA">
                   <Row justify="center" align="center" style={{ position: 'relative', top: '6.5rem' }} >
@@ -217,6 +235,24 @@ function HomePage () {
                   <div style={{ position: 'relative', top: '8rem', fontSize: '1.2rem', lineHeight: 2, textAlign: 'justify', width: '90%' }}>The CSDQA dataset contains the knowledge units and question-and-answer pairs corresponding to the diagrams, which are used to conduct research related to DQA. Questions include true and false questions and multiple choice questions.</div>
                   <Divider style={{ position: 'relative', top: '8rem' }} />
                   <div className="section" id="nav-5">
+                    <div className="section" id="nav-2" style={{ top: '3.5rem', position: 'relative' }} >
+                      <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: '0rem', left: 40, position: 'relative' }}>Paper</h2>
+                      <Row justify="center" align="center" style={{ position: 'relative', top: '0.5rem' }} >
+                        <Col span={4}>
+                          <img style={{ width: '10rem', height: '8rem' }} src={AboutImg} />
+                        </Col>
+                        <Col span={12} offset={2}>
+                          <h3 onMouseOver={onmouseOver} onMouseOut={onmouseout} onClick={() => {
+                            history.push('/pdf')
+                          }}>
+                            RL-CSDia: Representation Learning of Computer Science Diagrams
+                                 </h3>
+                          <h4>Shaowei Wang, Lingling Zhang, Xuan Luo, Xin Hu, Yi Yang, Jun Liu</h4>
+                          <a href={pdfFile} style={{ color: 'gray', fontWeight: 'bold', position: 'relative', top: '2rem' }}><FilePdfOutlined style={{ fontSize: 20 }} /><span style={{ position: 'relative', left: '2rem' }}>Download Paper</span></a>
+                        </Col>
+                      </Row>
+
+                    </div>
                     <h2 style={{ color: 'darkgrey', fontSize: '1.5rem', top: '7rem', left: 40, position: 'relative' }}>CONTACT</h2>
                     <ul style={{ fontSize: '1.2rem', top: '7rem', left: 0, position: 'relative', lineHeight: 2 }}>
                       <li>Shaowei Wang <a href="mailto:wang97@stu.xjtu.edu.cn">wang97@stu.xjtu.edu.cn</a></li>
